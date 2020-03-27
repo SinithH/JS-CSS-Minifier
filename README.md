@@ -1,5 +1,5 @@
 # auto-minify
-Minifies JS and CSS files with UglifyJS and CleanCSS
+Minifies JS and CSS code files using UglifyJS & CleanCSS
 
 
 ### Inputs
@@ -11,17 +11,17 @@ Minifies JS and CSS files with UglifyJS and CleanCSS
 
 ### Example
 
-##### Default implementation
+##### Default implementation of the action
 
 ```
 steps:
-  # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+  # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job have the access to it
   - uses: actions/checkout@v2
 
   - name: JS-CSS-Minifier
     uses: SinithH/JS-CSS-Minifier@v1.3
 
-  # Auto commits minified files to the repository
+  # Auto commits minified files into the repository
   # Ignore it if you don't want to commit the files to the repository 
   - name: Auto committing minified files
     uses: stefanzweifel/git-auto-commit-action@v3.0.0
